@@ -1,0 +1,44 @@
+[
+  {
+    "name": "overview",
+    "steps": [{ "click": "role=button[name=/Scan Pipelines/]" }, { "waitFor": "text=Pipeline Ranking" }]
+  },
+  {
+    "name": "failures",
+    "steps": [
+      { "click": "role=button[name=/Scan Pipelines/]" },
+      { "waitFor": "text=Pipeline Ranking" },
+      { "click": "role=tab[name=/Failure Analysis/]" },
+      { "click": "text=mobile-app" },
+      { "wait": 300 }
+    ],
+    "selector": ".ax-card:has(.ax-card__title:text-is('Failure Analysis'))"
+  },
+  {
+    "name": "queue",
+    "steps": [
+      { "click": "role=button[name=/Scan Pipelines/]" },
+      { "waitFor": "text=Pipeline Ranking" },
+      { "click": "role=tab[name=/Queue & Triggers/]" },
+      { "wait": 300 }
+    ],
+    "fullPage": true
+  },
+  {
+    "name": "test-health",
+    "steps": [
+      { "click": "role=tab[name=/Test Health/]" },
+      { "click": "role=button[name=/Scan Test Health/]" },
+      { "waitFor": "text=Test Run History" }
+    ]
+  },
+  {
+    "name": "flaky-tests",
+    "steps": [
+      { "click": "role=tab[name=/Test Health/]" },
+      { "click": "role=button[name=/Scan Test Health/]" },
+      { "waitFor": "text=Test Run History" }
+    ],
+    "selector": ".ax-card:has(.ax-card__title:text-is('Flaky Tests'))"
+  }
+]

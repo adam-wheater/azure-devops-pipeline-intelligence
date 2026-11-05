@@ -1,0 +1,110 @@
+{
+    "manifestVersion": 1,
+    "id": "pipeline-intelligence",
+    "version": "1.0.0",
+    "name": "Pipeline Intelligence",
+    "description": "Provides pipeline analytics and test health insights for Azure DevOps build pipelines.",
+    "publisher": "adam-wheater",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "tags": [
+        "pipelines",
+        "analytics",
+        "test-health",
+        "flaky-tests",
+        "build-insights",
+        "performance",
+        "ci-cd",
+        "monitoring"
+    ],
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "icons": {
+        "default": "static/icon.png"
+    },
+    "screenshots": [
+        { "path": "static/screenshots/overview.png" },
+        { "path": "static/screenshots/failures.png" },
+        { "path": "static/screenshots/queue.png" },
+        { "path": "static/screenshots/test-health.png" },
+        { "path": "static/screenshots/flaky-tests.png" }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "LICENSE"
+        }
+    },
+    "links": {
+        "repository": {
+            "uri": "https://github.com/adam-wheater/azure-devops-pipeline-intelligence"
+        },
+        "issues": {
+            "uri": "https://github.com/adam-wheater/azure-devops-pipeline-intelligence/issues"
+        },
+        "support": {
+            "uri": "https://github.com/adam-wheater/azure-devops-pipeline-intelligence/issues"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/adam-wheater/azure-devops-pipeline-intelligence"
+    },
+    "branding": {
+        "color": "#0078d4",
+        "theme": "dark"
+    },
+    "galleryFlags": [
+        "Preview"
+    ],
+    "contributions": [
+        {
+            "id": "pipeline-intelligence-hub",
+            "type": "ms.vss-web.hub",
+            "description": "Pipeline Intelligence hub under Pipelines",
+            "targets": [
+                "ms.vss-build-web.build-release-hub-group"
+            ],
+            "properties": {
+                "name": "Pipeline Intelligence",
+                "order": 99,
+                "uri": "dist/PipelineIntelligenceHub/PipelineIntelligenceHub.html",
+                "icon": {
+                    "light": "static/icon.png",
+                    "dark": "static/icon.png"
+                }
+            }
+        }
+    ],
+    "scopes": [
+        "vso.build",
+        "vso.test",
+        "vso.extension.data",
+        "vso.project"
+    ],
+    "demands": [],
+    "files": [
+        {
+            "path": "dist",
+            "addressable": true
+        },
+        {
+            "path": "static",
+            "addressable": true
+        },
+        {
+            "path": "overview.md",
+            "addressable": true
+        },
+        {
+            "path": "LICENSE",
+            "addressable": true
+        }
+    ]
+}
